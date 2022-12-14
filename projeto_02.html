@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Recrutamento Digital</h1>
+    <div id="resul"></div>
+    <div id="outro"></div>
+    <div id="out"></div>
+    <script>
+        let codigo = "";
+        let maiorIdade = 0;
+        let mensagem1 = "";
+        let mensagem = "";
+        let E = 0;
+        let idade = 0;
+        let sexo = "";
+        let exp = "";
+        let sem = 0;
+        let com = 0;
+        let cont1 = 0;
+        let cont2 = 0;
+        let c = 0;
+        let feminino = 0;
+        let masculino = 0;
+        let total = 0;
+        let media = 0;
+        let somaidade = 0;
+        let g3 = "";
+        let c3 = 0;
+        while (E < 3) {
+            codigo = prompt("Digite o Nº do candidato")
+            if (codigo < "400") {
+                idade = Number(prompt("Digite sua idade"));
+                sexo = prompt("Digite o sexo: \n 1 - Feminino. \n 2 - Masculino.");
+                exp = prompt("Tem experiência profissional? \n 1 - Sim \n 2 - Não");
+                c++
+                somaidade += idade;
+                E++
+            }
+            if (idade >= 18) {
+                maiorIdade += idade
+                total++;
+            }
+            
+            if (idade >= 18 && exp === "1" && sexo === "1") {
+                cont1++;
+                com += cont1
+                document.getElementById("outro").innerHTML += mensagem +"Total de Mulheres maiores de idade e com experiência " + com
+            }
+            if (idade >= 18 && exp === "1" && sexo === "2") {
+                cont2++;
+                sem += cont2
+                mensagem1 
+                document.getElementById("out").innerHTML += mensagem1+ "Total de Homens maiores de idade e com experiência " + sem
+            }
+            if (exp != "1") {
+                c3++;
+                g3 =  "Total de candidatos sem experiência "+ c3
+            }
+            media = somaidade / c;
+            } 
+          
+         document.getElementById("resul").innerHTML = " A média de idade dos candidatos: " + media + "</br> Número total de candidatos e candidatas: " + c+ "</br> total maior de idade: "+ total+ "</br> "+ g3;
+    </script>
+</body>
+
+</html>

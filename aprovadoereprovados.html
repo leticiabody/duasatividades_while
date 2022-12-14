@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Controle de Qualidade</h1>
+    <div id="resposta"></div>
+    <div id="resposta1"></div>
+
+    <script>
+        let mensagem = "";
+        let codigo = "";
+        let T = 0;
+        let soma = 0;
+        let a = 0;
+        let r = 0;
+        let total = 0;
+        let NP = Number(prompt("Quantos produtos deseja cadastrar"));
+
+        while (T < NP) {
+            codigo = (prompt("Digite o código do produto"));
+
+            T++;
+            soma = Number(prompt("Digite 1 para aprovado e 2 para reprovado "));
+            if (soma === 1) {
+                mensagem += "Código do produto: " + codigo + " Produto aprovado</br>"
+                a++
+
+            } else if (soma === 2) {
+                mensagem += "Código do produto: " + codigo + " Produto reprovado</br>"
+                r++
+
+
+            }
+        }
+        total = (Number(a) + Number(r));
+        document.getElementById("resposta").innerHTML = mensagem + "</br> Números de Aprovados: " + a + " </br> Número de Reprovados: " + r + " </br></br> O Total de peças: " + total;
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
